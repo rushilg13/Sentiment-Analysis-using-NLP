@@ -42,6 +42,12 @@ stemmer = PorterStemmer()
 tokenized_tweets = tokenized_tweets.apply(lambda sentence: [stemmer.stem(word) for word in sentence])
 # print(tokenized_tweets.head())
 
+# Lemmatization the words
+# from nltk.stem import WordNetLemmatizer
+# Lemmatizer = WordNetLemmatizer()
+# tokenized_tweets = tokenized_tweets.apply(lambda sentence: [Lemmatizer.lemmatize(word) for word in sentence])
+# print(tokenized_tweets.head())
+
 # Combine words into a single sentence
 for i in range(len(tokenized_tweets)):
     tokenized_tweets[i] = " ".join(tokenized_tweets[i])
